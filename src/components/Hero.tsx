@@ -1,19 +1,19 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import hero from "../assets/hero.png";
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   show: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.7,
-      ease: "easeOut",
+      ease: [0.16, 1, 0.3, 1],
     },
   },
 };
 
-const imageReveal = {
+const imageReveal: Variants = {
   hidden: { opacity: 0, scale: 0.96, y: 12 },
   show: {
     opacity: 1,
@@ -22,7 +22,7 @@ const imageReveal = {
     transition: {
       duration: 0.9,
       delay: 0.15,
-      ease: "easeOut",
+      ease: [0.16, 1, 0.3, 1],
     },
   },
 };
